@@ -4,9 +4,11 @@
 	<title>Disciplinas</title>
 </head>
 <body>
-	@foreach ($disciplinas as $disciplina)
-		{{$disciplina->titulo}}
-		<br />
-	@endforeach
+	<a href="/disciplina/cadastrar">Cadastrar disciplina</a>
+	<ul>
+		@foreach ($disciplinas as $disciplina)
+			<li><a href="/disciplinas/{{ $disciplina->id}}"> {{$disciplina->titulo}} </a></li>
+		@endforeach
+	</ul>
 </body>
 </html>
