@@ -87,6 +87,7 @@ class DisciplinaController extends Controller
      */
     public function destroy(Disciplina $disciplina)
     {
-        //
+        $disciplina->delete();
+        return redirect('/');
     }
 }
