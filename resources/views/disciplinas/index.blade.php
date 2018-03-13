@@ -1,7 +1,9 @@
 @extends('master')
 
 @section('content')
+@auth
 	<a class="btn btn-primary" href="/disciplinas/create">Cadastrar disciplina</a>
+@endauth
 	<ul>
 		@foreach ($disciplinas as $disciplina)
 			<div class="row form-group">
