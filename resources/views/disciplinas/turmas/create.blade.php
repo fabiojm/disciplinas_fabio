@@ -17,7 +17,7 @@
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="inicio" class="for-control">Data Inicial:</label>
-					<input class="form-control" type="date" name="inicio" />
+					<input class="datepicker form-control" type="date" name="inicio" />
 				</div>
 			</div>
 		</div>
@@ -26,7 +26,7 @@
 			<div class="col-md-4">
 				<div class="form-group">
 					<label for="fim" class="for-control">Data Final:</label>
-					<input class="form-control" type="date" name="fim" />
+					<input class="datepicker form-control" type="date" name="fim" />
 				</div>
 			</div>
 		</div>
@@ -42,4 +42,11 @@
 		
 		<button class="btn btn-primary" type="submit">Salvar</button>
 	</form>
+
+	<script type="text/javascript">
+		$('.datepicker').datepicker({
+    		format: 'dd/mm/yyyy',
+    		language: 'pt-BR'
+		});
+	</script>	
 @endsection

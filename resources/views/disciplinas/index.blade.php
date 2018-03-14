@@ -1,6 +1,12 @@
 @extends('master')
 
 @section('content')
+	<form method="POST" action="/disciplinas/search">
+	    {{ csrf_field() }}
+	    <input name="text" type="text">
+	    <button  class="btn btn-info" type="submit"> Buscar </button>
+	</form>
+
 @auth
 	<a class="btn btn-primary" href="/disciplinas/create">Cadastrar disciplina</a>
 @endauth

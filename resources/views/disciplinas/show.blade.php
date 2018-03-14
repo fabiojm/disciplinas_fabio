@@ -11,9 +11,9 @@
 <h1>Turmas</h1>
 
 <br/>
-@foreach ($disciplina->turmas as $turma)
+@foreach ($disciplina->turmas->sortByDesc('inicio') as $turma)
     <h2>{{ $turma->ministrante }}</h2>
-    <h3>{{ $turma->inicio }}</h3>
+    <h3>{{ Carbon\Carbon::parse($turma->inicio)->format('d/m/Y') }}</h3>
     <br/>
 @endforeach
 

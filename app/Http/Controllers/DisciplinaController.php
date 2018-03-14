@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Disciplina;
 use App\Turma;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class DisciplinaController extends Controller
 {
@@ -113,5 +114,12 @@ class DisciplinaController extends Controller
         $turma->save();
         return redirect("/disciplinas/$disciplina_id");
     }
+
+    public function search(Request $request)
+{
+    $text = $request->text;
+    $disciplinas = Disciplina::where('titulo', 'LIKE', "%{$text}%")->get();
+    return view('disciplinas.index',compact('disciplinas'));
+}
 }
 
