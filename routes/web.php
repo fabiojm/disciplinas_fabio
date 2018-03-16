@@ -7,3 +7,6 @@ Route::get('/disciplinas/{disciplina}', 'DisciplinaController@show');
 Route::get('/disciplina/{disciplina}/edit', 'DisciplinaController@edit');
 Route::patch('/disciplina/{disciplina}','DisciplinaController@update');
 Route::delete('/disciplina/{disciplina}', 'DisciplinaController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
