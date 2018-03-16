@@ -12,7 +12,8 @@ Route::delete('/disciplina/{disciplina}', 'DisciplinaController@destroy');
 Route::get('/disciplinas/{disciplina_id}/turmas/create','DisciplinaController@createTurma');
 Route::post('/disciplinas/{disciplina_id}/turmas','DisciplinaController@storeTurma');
 
+Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
