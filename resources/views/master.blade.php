@@ -48,6 +48,15 @@
 
     <!-- Begin page content -->
     <main role="main" class="container">
+      @auth
+        <form method="post" action="/logout">
+          {{ csrf_field() }}
+          <button type="submit" class="btn btn-danger"> Logout </button>
+        </form>
+      @else
+        <a class="btn btn-success" href="/login"> Login </a>
+        <a class="btn btn-danger" href="/register"> Cadastre-se </a>
+      @endauth
       @yield('content')
     </main>
 
